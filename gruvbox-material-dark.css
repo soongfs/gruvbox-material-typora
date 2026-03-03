@@ -47,6 +47,22 @@
   --aqua: #89b482;
   --blue: #7daea3;
   --purple: #d3869b;
+  --bg-color: var(--bg0);
+  --text-color: var(--fg0);
+  --md-char-color: var(--grey1);
+  --meta-content-color: var(--grey2);
+  --primary-color: var(--blue);
+  --primary-btn-border-color: var(--aqua);
+  --primary-btn-text-color: var(--bg0);
+  --window-border: 1px solid var(--bg3);
+  --active-file-bg-color: var(--bg3);
+  --active-file-text-color: var(--fg1);
+  --active-file-border-color: var(--yellow);
+  --side-bar-bg-color: var(--bg1);
+  --item-hover-bg-color: var(--bg2);
+  --item-hover-text-color: var(--fg1);
+  --control-text-color: var(--grey2);
+  --control-text-hover-color: var(--fg1);
 }
 
 html,
@@ -65,6 +81,97 @@ body {
     radial-gradient(circle at top right, var(--wash-orange), transparent 26rem),
     linear-gradient(180deg, var(--bg-dim) 0%, var(--bg0) 18%, var(--bg0) 100%);
   background-attachment: fixed;
+}
+
+#typora-sidebar {
+  background: var(--side-bar-bg-color) !important;
+  color: var(--fg0);
+  border-right: 1px solid var(--bg3);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.18);
+}
+
+#typora-sidebar .sidebar-tabs {
+  background: linear-gradient(180deg, var(--bg2), var(--bg1));
+  border-bottom: 1px solid var(--bg3);
+}
+
+#typora-sidebar .sidebar-tab {
+  color: var(--control-text-color);
+  border: 0;
+  border-radius: 0;
+}
+
+#typora-sidebar .sidebar-tab:hover,
+#typora-sidebar .sidebar-tab.active {
+  color: var(--control-text-hover-color);
+  background: var(--item-hover-bg-color);
+}
+
+#typora-sidebar .sidebar-content,
+#typora-sidebar .file-list,
+#typora-sidebar .outline-content,
+#typora-sidebar .file-tree {
+  background: transparent;
+  color: var(--fg0);
+}
+
+#typora-sidebar .file-list-item,
+#typora-sidebar .file-node-content,
+#typora-sidebar .outline-item {
+  color: var(--fg0);
+  border-radius: 0.5rem;
+}
+
+#typora-sidebar .file-list-item:hover,
+#typora-sidebar .file-node-content:hover,
+#typora-sidebar .outline-item:hover,
+#typora-sidebar .sidebar-footer-item:hover,
+#typora-sidebar .sidebar-footer-menu-item:hover {
+  background: var(--item-hover-bg-color);
+  color: var(--item-hover-text-color);
+}
+
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .file-tree-node.active > .file-node-background,
+#typora-sidebar .file-tree-node.active > .file-node-content,
+#typora-sidebar .outline-item.active,
+#typora-sidebar .outline-item:hover {
+  background: var(--active-file-bg-color);
+  color: var(--active-file-text-color);
+}
+
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .file-tree-node.active > .file-node-background,
+#typora-sidebar .file-tree-node.active > .file-node-content,
+#typora-sidebar .outline-item.active {
+  box-shadow: inset 3px 0 0 var(--active-file-border-color);
+}
+
+#typora-sidebar .file-node-icon,
+#typora-sidebar .file-node-open-state,
+#typora-sidebar .outline-expander,
+#typora-sidebar .file-list-item-summary {
+  color: var(--grey1);
+}
+
+#typora-sidebar .outline-label,
+#typora-sidebar .file-node-title,
+#typora-sidebar .file-list-item-title {
+  color: inherit;
+}
+
+#typora-sidebar .sidebar-footer {
+  background: linear-gradient(180deg, var(--bg2), var(--bg1));
+  border-top: 1px solid var(--bg3);
+}
+
+#typora-sidebar input,
+#typora-sidebar .search-panel-replace-btn,
+#typora-sidebar .searchpanel-search-icon,
+#typora-sidebar .searchpanel-replace-icon {
+  background: var(--bg2);
+  color: var(--fg0);
+  border-color: var(--bg3);
 }
 
 #write,
