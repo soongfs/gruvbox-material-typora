@@ -132,8 +132,6 @@ body {
 }
 
 #typora-sidebar .file-list-item.active,
-#typora-sidebar .file-tree-node.active > .file-node-background,
-#typora-sidebar .file-tree-node.active > .file-node-content,
 #typora-sidebar .outline-item.active,
 #typora-sidebar .outline-item:hover {
   background: var(--active-file-bg-color);
@@ -141,10 +139,20 @@ body {
 }
 
 #typora-sidebar .file-list-item.active,
-#typora-sidebar .file-tree-node.active > .file-node-background,
-#typora-sidebar .file-tree-node.active > .file-node-content,
 #typora-sidebar .outline-item.active {
-  box-shadow: inset 3px 0 0 var(--active-file-border-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#typora-sidebar .file-tree-node.active > .file-node-background {
+  background: var(--active-file-bg-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#typora-sidebar .file-tree-node.active > .file-node-content {
+  background: transparent;
+  border-radius: 0;
 }
 
 #typora-sidebar .file-node-icon,
